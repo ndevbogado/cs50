@@ -16,41 +16,19 @@ class Hero:
             return "Force Choke"
         else:
             return "No Force"
-    
-    @property
-    def faction(self):
-        return self._faction
 
-    @faction.setter
-    def faction(self, faction):
-        if faction not in ["Empire", "Rebele Alliance", "Republic", "Separatist"]:
-            raise ValueError("Invalid Faction")
-        self._faction = faction
+    @classmethod
+    def get(cls):
+        name = input("Name: ")
+        faction = input("Faction: ")
+        force = input("Force Alligment: ")
 
-    @property
-    def name(self):
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        if not name:
-            raise ValueError("Missing Name")
-        self._name = name
-
-
+        return cls(name, faction, force)
 
 def main():
-    hero = get_hero()
+    hero = Hero.get()
     print(hero.force_power())
 
-def get_hero():
-    name = input("Name: ")
-    faction = input("Faction: ")
-    force = input("Force: ")
-    
-    hero = Hero(name, faction, force)    
-
-    return hero
 
 if __name__ == "__main__":
     main()
