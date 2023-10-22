@@ -1,14 +1,12 @@
 import sys
+import argparse
 
 def main():
-    if len(sys.argv) == 3 and sys.argv[1] == "-n":
-        n = int(sys.argv[2])
+    parser = argparse.ArgumentParser(description="Pew like a bolt weapon")
+    parser.add_argument("-n", default=1, help="number of times to pew", type=int)
+    args = parser.parse_args()
 
-        for i in range(n):
-            print("pew")
-    else:
-        print("usage: pew.py")
-
-
+    for _ in range(args.n):
+        print("pew")
 if __name__ == "__main__":
     main()
