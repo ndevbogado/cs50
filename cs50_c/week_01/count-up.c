@@ -7,13 +7,10 @@ int main(void)
     printf("Type max rep, to count-up: ");
     scanf("%d", &max);
 
-
-    int i = 0;
-    while (i < max) 
+    for(int i = 0; i < max; i++)
     {
         printf("%d",i);
         printf("\n");
-        i++;
     }
 }
 
