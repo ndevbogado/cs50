@@ -7,11 +7,9 @@ int main(void)
         [0] = 9.0,
         [1] = 2.9,
         [4] = 3.E+25,
-        [3] = .0007
+        [3] = 0.0007
     };
 
     for (size_t i = 0; i < 5; i++)
-    {
         printf("element %zu is %g\n", i, A[i]);
-    }
 }
