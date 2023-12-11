@@ -9,7 +9,7 @@ int main(void)
 
     for  (int i = 0; i < SIZE; i ++)
     {
-        printf("Type the number %i: ",i);
+        printf("Type the number %i: ",i+1);
         scanf("%i", &score[i]);
     }
 
@@ -22,9 +22,7 @@ float average(int numbers[], int SIZE)
     int total = 0;
 
     for (int i = 0; i < SIZE; i++)
-    {
         total += numbers[i];
-    }
 
     return total / (float)SIZE;
 }
